@@ -1,0 +1,755 @@
+<!DOCTYPE html> 
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color: #111;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+.logo span{
+    color: #311ffb;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.btn-reserve{
+    padding: 10px 20px;
+    background: #252061;
+   margin-top: -10px;
+   text-transform:uppercase ;
+}
+
+.btn-reserve:hover{
+    background: #1063d8;
+    transition: ease-out;
+}
+
+header .navbar li a:hover{
+    color: #1f31fb;
+    border-bottom: 2px solid #1b3ecb;
+}
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(surf45.jpg);
+    background-size: cover;
+}
+
+.banniere .contenu{
+    max-width: 70%;
+    text-align: center;
+}
+.banniere .contenu h2{
+    color: #fff;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+.contenu p:nth-child(2){
+    color: #0f0e22;
+    font-size: 1.2em;
+}
+
+.btn1{
+    font-size: 1em;
+    color: #fff;
+    background: #252061;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+.btn2{
+    font-size: 1em;
+    color: #fff;
+    background: #252061;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.btn1:hover{
+letter-spacing: 4px;
+}
+section{
+    padding: 100px;
+}
+.apropos{
+ display :grid;
+ grid-template-columns: 1fr 1fr;
+
+}
+
+
+.row .col50{
+    position: relative;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row .col50 h2{
+    margin-bottom: 20px;
+}
+
+.titre-texte{
+    color: #000;
+    font-size: 2em;
+    font-weight: 300px;
+    text-transform: capitalize;
+}
+
+.titre-texte span{
+    color: #4822aa;
+    font-size: 1.5em;
+    font-weight: 700px;
+}
+
+.row .col50 img{
+    height: 450px;
+    width: 600px;
+    position: relative;
+}
+
+.titre{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu{
+    margin-top: -100px;
+}
+
+.menu .contenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .contenu .box{
+    width: 350px;
+    margin: 20px;
+    border: 20px solid #fff;
+    box-shadow: 20px 15px 35px rgba(0,0,0, 0.8);
+}
+
+.menu .contenu .box .imbox{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .contenu .box .imbox img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu .contenu .box .text{
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+}
+
+.menu .contenu .box .text h3{
+    font-weight: 400;
+}
+
+.expert{
+    margin-top:-100px;
+}
+
+.expert .contenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.expert .contenu .box{
+    width: 250px;
+    margin: 15px;
+}
+.expert .contenu .box img{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.expert .contenu .box h3{
+    color: #111;
+    font-weight: 400;
+    text-align: center;
+}
+
+.temoignage{
+    background-image: url(surf12.jpg);
+    background-size: cover;
+}
+
+.temoignage .contenu{
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.temoignage .contenu .box{
+    width: 340px;
+    margin: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.temoignage .contenu .box .imbox{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.temoignage .contenu .box .imbox img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.temoignage .contenu .box .text{
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.temoignage .contenu .box .text h3{
+    color: #0e50b3;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.blanc .titre-texte{
+    color: #fff;
+}
+
+.blanc .titre-texte,
+.blanc p{
+    color: #17006a;
+}
+
+.contact{
+    background-image: url(bureaupc.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+    width: 100%;
+    background-position: unset;
+}
+
+.contactform{
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
+    max-width: 500px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 38%;
+}
+
+.contactform .inputboite{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactform h3{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contactform .inputboite input,
+.contactform .inputboite textarea{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactform .inputboite input[type="submit"]{
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffff;
+    background: #310fc8;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    max-width: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright{
+    padding: 20px 40px;
+    border-top: 2px solid rgba(0,0,0, 0.1);
+    background: rgba(228,222,222,);
+    text-align: center;
+}
+
+.copyright p:nth-child(1){
+    color: #333;
+}
+
+.copyright a {
+    color: #fb911f;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.contact .titre-text span{
+    color: #1f26fb;
+    font-size: 2em;
+}
+
+header.sticky{
+    background: #fff;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+}
+
+header.sticky .logo{
+    color: #000;
+}
+
+header.sticky .navbar li a {
+    color: #000;
+}
+
+header.sticky li a:hover{
+    color: #1f65fb;
+    border-bottom: 2px solid #1f26fb;
+}
+
+@media (max-width: 991px) {
+header, 
+header.sticky{
+    padding: 10px 20px;
+}
+
+header .navbar li{
+    margin-left: 0px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.navbar{
+    display: none;
+}
+section{
+    padding: 20px;
+}
+
+header .navbar.active{
+    width: 100%;
+    height: calc(100% -68px);
+    position: fixed;
+    top: 68px;
+    left:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffff;
+    align-items: center;
+}
+
+.menuToggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(tenusurf.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 30px;
+}
+
+.menuToggle.active
+{
+    background-image: url(surf12.jpg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-origin: center;
+}
+
+header.sticky .menuToggle{
+    filter: invert(1);
+}
+
+
+.banniere .contenu h2{
+    font-size: 2em;
+}
+
+.row .col50 img{
+    margin-left: 18%;
+}
+
+.contenu p:nth-child(2){
+    font-size: 1.2em;
+}
+.expert{
+    margin-top: 0px;
+}
+
+.menu{
+    margin-top: 0px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.temoignage h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+.temoignage p{
+text-align: center;
+}
+
+.contactform{
+    margin-left: 25%;
+}
+
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    
+    }
+
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .banniere .contenu h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+
+    .titre-text{
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignage h2 
+    {
+        font-size: 1.1em;
+    }
+
+    .temoignage p{
+        text-align: center;
+    }
+}</style>
+ 
+  <title>surf</title>
+</head>
+<body>
+<header>
+   <a href="#" class="logo"><span>S</span>urf</a>
+   <ul class="navbar">
+     <li><a href="#" > ACCUEIL</a></li>
+     <li><a href="#apropos" > A PROPOS</a></li>
+     <li><a href="#cours" > Cours</a></li>
+     <li><a href="#instructeurs" >INSTRUCTEURS</a></li>
+     <li><a href="#contact"> CONTACT</a></li>
+     <li><a href="#temoignage" > TEMOIGNAGE</a></li>
+     <a href="final.html" class="btn-reserve"onclick="toggleMenu();">Réserver</a>
+   </ul>
+
+</header>
+<section class="banniere" id="banniere">
+    <div class="contenu">
+        <h2>Vivez l'aventure du surf a mehdia </h2>
+        <p>Rejoignez-nous pour apprendre à surfer sur les plus belles vagues et vivre des moments inoubliables.</p>
+        <a href="#cours" class="btn1">Découvrez nos cours</a>
+        <a href="final.html" class="btn2">Réserver</a>
+    </div>
+</section>
+</section>
+<section class="apropos" id="apropos">
+    
+        <div class="col50">
+            <h2 class="titre-texte"><span>A</span> Propos De Nous</h2>
+            <p>Nous sommes une école de surf située sur la plage de Mehdia, à Kenitra. Passionnés par l'océan et les vagues, notre mission est de vous enseigner les bases du surf, de vous aider à développer vos compétences et de vous offrir une expérience incroyable dans le monde du surf.</p>
+        </div>
+        <div class="col50">
+            <div class="img">
+                <img src="planche.jpg">
+        </div>
+    
+</section>
+<section class="menu" id="cours">
+    <div class="titre">
+        <h2 id="Cours" class="titre-texte"><span>C</span>ours</h2>
+        <p>Nos cours sont conçus pour tous les niveaux, des débutants aux surfeurs avancés.</p>
+    </div>
+    <div class="contenu">
+        <div class="box">
+            <div class="imbox">
+                <img src="plage.jpg" alt="">
+            </div>
+            <div class=""><h3>Cours pour débutants</h3>
+                <p>Parfait pour ceux qui n'ont jamais surfé auparavant. Vous apprendrez les bases du surf et comment vous lever sur la planche.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="surfer.jpg" alt="">
+            </div>
+            <div class="text">
+                <h3>Cours intermédiaires</h3>
+                <p>Pour les surfeurs ayant déjà une certaine expérience, ce cours vous permettra d'améliorer votre technique et de prendre des vagues plus difficiles.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="surf12.jpg" alt="">
+            </div>
+            <div class="text">
+                <h3>Cours avancés</h3>
+                <p>Réservé aux surfeurs expérimentés, ce cours vous aidera à perfectionner vos compétences et à vous attaquer à des vagues de niveau expert.</p>
+            </div>
+        </div>
+    </div>
+    <div class="titre">
+        <a href="#" class="btn1">En savoir plus</a>
+    </div>
+</section>
+<div class="titre">
+    <a href="#" class="btn1">En savoir plus</a>
+</div>
+</section>
+<section class="expert" id="expert">
+<div class="titre">
+    <h2 class="titre-texte" id="instructeurs">Nos <span>I</span>nstructeurs</h2>
+    <p>Nos instructeurs qualifiés et passionnés vous guideront tout au long de votre apprentissage du surf.</p>
+</div>
+<div class="contenu">
+    <div class="box">
+        <div class="imbox">
+            <img src="tenusurf.jpg" alt="">
+        </div>
+        <div class="text">
+            <h3>John Doe</h3>
+            <p>John est un surfeur professionnel avec plus de 10 ans d'expérience dans l'enseignement du surf.</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="imbox">
+            <img src="surfer23.jpg" alt="">
+        </div>
+        <div class="text">
+            <h3>Jane Smith</h3>
+            <p>Jane est une passionnée de surf qui aime partager sa passion et aider les autres à progresser.</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="imbox">
+            <img src="plage.jpg" alt="">
+        </div>
+        <div class="text">
+            <h3>Mike Johnson</h3>
+            <p>Mike est un ancien champion de surf qui apporte son expertise et sa technique aux élèves de l'école.</p>
+        </div>
+    </div>
+</div>
+</section>
+<section class="temoignage" id="temoignage">
+<div class="titre blanc">
+    <h2 class="titre-texte">Ce que disent nos <span>C</span>lients</h2>
+    <p>Voici les té moignages de nos clients satisfaits.</p>
+</div>
+<div class="contenu">
+    <div class="box">
+        <div class="text">
+            <p>"Les cours pour débutants étaient parfaits pour moi. J'ai pu apprendre les bases du surf rapidement et en toute sécurité. Je recommande vivement cette école de surf !"</p>
+            <h4>Michelle</h4>
+            <span>Élève débutante</span>
+        </div>
+    </div>
+    <div class="box">
+        <div class="text">
+            <p>"Les instructeurs sont incroyables ! Grâce à leurs conseils et à leur patience, j'ai pu progresser rapidement dans ma pratique du surf. Je suis maintenant capable de prendre des vagues plus difficiles."</p>
+            <h4>Alexandre</h4>
+            <span>Élève intermédiaire</span>
+        </div>
+    </div>
+    <div class="box">
+        <div class="text">
+            <p>"Les cours avancés m'ont vraiment aidé à perfectionner mes compétences en surf. Les instructeurs sont très expérimentés et m'ont donné des conseils précieux. Je me sens plus confiant dans l'eau."</p>
+            <h4>Sophie</h4>
+            <span>Élève avancée</span>
+        </div>
+    </div>
+</div>
+</section>
+<section class="contact" id="contact">
+    <div class="titre noir">
+        <h2 class="titre-text"><span>C</span>ontact</h2>
+        <p>N'hésitez pas à nous contacter pour toute question ou réservation.</p>
+    </div>
+    <div class="contactform">
+        <h3>Envoyez-nous un message</h3>
+        <div class="inputboite">
+            <input type="text" placeholder="Nom">
+        </div>
+        <div class="inputboite">
+            <input type="text" placeholder="Email">
+        </div>
+        <div class="inputboite">
+            <textarea placeholder="Message"></textarea>
+        </div>
+        <div class="inputboite">
+            <input type="submit" value="Envoyer">
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="logo">
+        <a href="#" class="logo-texte"><span>E</span>cole de Surf</a>
+    </div>
+    <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    </ul>
+</footer>
+<script type="text/javascript">
+    window.addEventListener('scroll', function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    }
+</script>
+
+
+</body>
+</html>
